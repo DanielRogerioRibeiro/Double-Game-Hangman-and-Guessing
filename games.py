@@ -1,5 +1,5 @@
-import forca
-import adivinhacao
+import hangman
+import divination
 
 def escolhe_jogo():
     print("*********************************")

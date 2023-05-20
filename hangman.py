@@ -39,21 +39,18 @@ def jogar():
 
     while(not enforcou and not acertou):
 
-        chute = input("Qual letra? ")
-        chute = chute.strip().upper()
+        chute = pede_chute()
 
             
         if (chute in palavra_secreta):
-            index = 0
-            for letra in palavra_secreta:
-                if(chute == letra):
-                        letras_acertadas[index] = letra
-                index += 1
+             marca_chute_correto(chute, letras_acertadas, palavra_secreta)
         else:
-            erros += 1 
+            erros += 1
+            desenha_forca(erros)
             
         enforcou = erros == 5
         acertou = "_" not in letras_acertadas
+        
         print(letras_acertadas)
 
     if(acertou):

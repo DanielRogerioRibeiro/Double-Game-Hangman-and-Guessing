@@ -148,5 +148,16 @@ def imprime_mensagem_perdedor(palavra_secreta):
     print("     \_         _/         ")
     print("       \_______/           ")
 
+
+def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
+    index = 0
+    for letra in palavra_secreta:
+        if (chute == letra):
+            letras_acertadas[index] = letra
+        index += 1
+
+
+
+
 if(__name__ == "__main__"):
     jogar()

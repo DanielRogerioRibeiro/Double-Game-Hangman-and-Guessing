@@ -157,6 +157,10 @@ def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
         index += 1
 
 
+def pede_chute():
+    chute = input("Qual letra? ")
+    chute = chute.strip().upper()
+    return chute
 
 
 if(__name__ == "__main__"):
